@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function() {
+            // ви можете зробити скільки завгодно слайдів
+            let slides = [
+                {
+                    title: "Google",
+                    background: "https://via.placeholder.com/500x150",
+                    link: "http://google.com"
+                }, {
+                    title: "Yahoo",
+                    background: "https://via.placeholder.com/500x150",
+                    link: "http://yahoo.com"
+                }
+            ]
+            Slider.initSlider(slides);
+        };
+     </script>
+
+<button onclick="Slider.prevSlide()">Prev</button>
+<button onclick="Slider.nextSlide()">Next</button>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>3 Column Layout</title>
+   <script src="assets/js/script.js"></script>
+   <style src="assets/css/style.css"></style>
+   <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+<header class="header"> <p> <img src="public/images/bloss.jpg" alt="Сиренево-рощовые розы"> <i> <b>Blossom</b></i></p> </header>
+
+<div class="container">
+    <div id="slider"></div>
+   <main class="center column">
+       <article>
+           <h1>Slider</h1>
+           <p></p>
+       </article>
+   </main>
+   <nav class="left column">
+       <h3>Left heading</h3>
+       <ul>
+           <li><a href="media.html">Link to next page</a></li>
+       </ul>
+   </nav>
+   <div class="right column">
+       <h3>Right heading</h3>
+       <p></p>
+   </div>
+   <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+   <footer class="footer"><p> <img src="public/images/flow.jpg"> </p></footer>
+</div>
+</body>
+</html>

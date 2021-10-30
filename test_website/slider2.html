@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <script>
+
+
+        window.onload = function() {
+            // ви можете зробити скільки завгодно слайдів
+            let slides = [
+                {
+                    title: "YouTube",
+                    background: "F67F4",
+                    link: "https://youtube.com"
+                }, {
+                    title: "Twitter",
+                    background: "F6D45",
+                    link: "https://twitter.com"
+                }
+            ]
+            Slider.initSlider(slides);  
+            }
+            toggle.addEventListener('click', (event)=>{
+   if (event.target.classList.contains('start')){
+       event.target.innerHTML = 'Stop';
+       clearInterval(interval)
+   } else {
+       event.target.innerHTML = 'Start';
+       interval = setInterval(()=>{
+           Slider.nextSlide();
+       },1000)
+   }
+   event.target.classList.toggle('start')
+});
+
+        setSlide = function(id){
+let btn = document.createElement('button');
+btn.className = 'btn';
+btn.id = 'button-'+slide.id;
+btn.innerHTML = slide.id;
+btn.innerText = Button;
+        };
+
+     </script>
+
+
+ 
+<button onclick="Slider2.prevSlide()">Prev</button>
+<button onclick="Slider2.nextSlide()">Next</button>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>3 Column Layout</title>
+   <script src="assets/js/script.js"></script>
+   <style src="assets/css/style.css"></style>
+   <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+<header class="header"> <p> <img src="public/images/bloss.jpg" alt="Сиренево-розовые розы"> <i> <b>Blossom</b></i></p> </header>
+
+<div class="container">
+    <div id="slider"></div>
+   <main class="center column">
+       <article>
+           <h1>Slider</h1>
+           <p></p>
+       </article>
+   </main>
+   <nav class="left column">
+       <h3>Left heading</h3>
+       <ul>
+           <li><a href="media.html">Link to next page</a></li>
+       </ul>
+   </nav>
+   <div class="right column">
+       <h3>Right heading</h3>
+       <p></p>
+   </div>
+   <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+   <footer class="footer"><p> <img src="public/images/flow.jpg"> </p></footer>
+</div>
+</body>
+</html>
